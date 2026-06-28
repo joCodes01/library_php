@@ -3,3 +3,7 @@ CREATE_DB.txt
 TASKS.txt
 .env
 library.code-workspace
+bootstrap.css
+bootstrap.min.css
+bootstrap.bundle.js
+bootstrap.bundle.min.js

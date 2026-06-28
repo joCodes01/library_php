@@ -124,9 +124,9 @@ $book_copies = $result->fetch_all(MYSQLI_ASSOC);
                 
              
                 <div class='container-admin'>
-
+                
+                <!-- DELETE BOOK -->
                 <?php if ($book_copy['status'] == 'available') : ?>
-                  <!-- DELETE BOOK -->
                   <form
                     method = "POST"
                     action="deletebook.php"
@@ -143,6 +143,27 @@ $book_copies = $result->fetch_all(MYSQLI_ASSOC);
                       class="delete-book"
                       name="delete-book"
                       >Delete book</button>
+                  </form>
+                  <?php endif ?>
+
+                <!--  RETURN BOOK -->
+                <?php if ($book_copy['status'] == 'onloan') : ?>
+                  <form
+                    method = "POST"
+                    action="src/process_returnbook.php"
+                    name="form-returnbook">
+                  
+                    <!-- hidden book id -->
+                    <input
+                      type="hidden"
+                      name="copy-id"
+                      id="copy-id"
+                      value="<?= $book_copy['copy_id'] ?>">
+                    <button
+                      id="return-book"
+                      class="return-book"
+                      name="return-book"
+                      >Return book</button>
                   </form>
                   <?php endif ?>
 
