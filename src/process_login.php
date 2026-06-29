@@ -27,6 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         var_dump($_SESSION['user_type']);
         header('Location: ../books.php');
         exit();
+    } else {
+        header('Location: ../login.php?error=login_failed');
     }
 }
 

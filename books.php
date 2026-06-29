@@ -63,7 +63,7 @@ $book_copies = $result->fetch_all(MYSQLI_ASSOC);
 
       <?php foreach($books as $book): ?>
 
-        <li class="container-book bg-white rounded">
+        <li class="container-book bg-white rounded shadow-sm ">
           <h2 class="title display-10"><?=  $book['title'] ?></strong></h2>
 
           <div class="book-item">

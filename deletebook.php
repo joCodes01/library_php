@@ -90,7 +90,7 @@ $category = $book['category'];
     </nav>
 
     <div class="container-delete-outer">
-      <div class="container-book container-delete bg-white rounded">
+      <div class="container-book container-delete bg-white rounded shadow-sm">
           <h2 class="title display-10"><?=  $book['title'] ?></strong></h2>
           <div class="book-item">
               <p class="author "><strong>Author</strong></p>

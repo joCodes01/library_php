@@ -42,7 +42,12 @@ if ( isset($_SESSION['logged_in']) && $_SESSION['logged_in'] !== false) {
 
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="text" id="email" name="email" class="form-control" />
+          <input 
+          type="text" 
+          id="email" 
+          name="email" 
+          class="form-control" />
+          <span id="email-message" class=""></span>
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
@@ -52,7 +57,12 @@ if ( isset($_SESSION['logged_in']) && $_SESSION['logged_in'] !== false) {
             name="password"
             class="form-control"
           />
+          <span id="password-message" class=""></span>
         </div>
+        <!-- Add error message -->
+        <?php if (isset($_GET['error']) && $_GET['error'] === 'login_failed') : ?>
+          <p style="color:red">Login failed</p>
+        <?php endif; ?>
 
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

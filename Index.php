@@ -56,7 +56,7 @@ require 'src/session.php';
       </div>
     </div>
     <div class="m-4">
-      <div class="container-whatson">
+      <div class="container-whatson shadow-sm">
         <h2>What's on</h2>
         <strong>
           <p class="mb-2">We have a variety of social and educational events for students.</p>

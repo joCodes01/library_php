@@ -51,7 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             exit();
         }
 
-
         ///// sanitise user input
         $firstname = htmlspecialchars(trim($user_firstname));
         $lastname = htmlspecialchars(trim($user_lastname));

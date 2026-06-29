@@ -89,7 +89,7 @@ $category = $book['category'];
       </div>
     </nav>
 
-    <div class="container-editbook">
+    <div class="container-editbook shadow-sm">
       <form
         method="POST"
         action="src/process_editbook.php"
