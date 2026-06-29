@@ -70,7 +70,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $stmt = $conn->prepare("INSERT INTO user (firstname, lastname, email, password) VALUES (?, ?, ?, ?)");
             $stmt->bind_param('ssss', $firstname, $lastname, $email, $password);
             $stmt->execute();
-            header('Location: ../login.php');
+            $_SESSION['logged_in'] = true;
+            $_SESSION['user_type'] = "member";
+            header('Location: ../books.php');
             exit();
         } else {
             echo "Sorry there has been an error creating your account.";

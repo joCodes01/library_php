@@ -89,49 +89,45 @@ $category = $book['category'];
       </div>
     </nav>
 
-    <div class="container-book bg-white rounded">
-        <h2 class="title display-10"><?=  $book['title'] ?></strong></h2>
-
-        <div class="book-item">
-            <p class="author "><strong>Author</strong></p>
-            <p><?=  $book['author'] ?></p>
-        </div>
-
-        <div class="book-item">
-            <p class="publisher "><strong>Publisher</strong></p>
-            <p><?=  $book['publisher'] ?></p>
-        </div>
-
-        <div class="book-item">
-            <p class="language book-item-title"><strong>Language</strong></p>
-            <p><?=  $book['language'] ?></p>
-        </div>
-
-        <div class="book-item">
-            <p class="category "><strong>Category</strong></p>
-            <p><?=  $book['category'] ?></p>
-        </div>
-
-
-
-        <!-- DELETE BOOK -->
-        <form
-            method = "POST"
-            action="src/process_deletebook.php"
-            name="form-deletebook">
-        
-            <!-- hidden book id -->
-            <input
-                type="hidden"
-                name="book-id"
-                id="book-id"
-                value="<?= $book['book_id'] ?>">
-            <button
-                id="delete-book"
-                class="delete-book"
-                name="delete-book"
-                >Delete book</button>
-        </form>
+    <div class="container-delete-outer">
+      <div class="container-book container-delete bg-white rounded">
+          <h2 class="title display-10"><?=  $book['title'] ?></strong></h2>
+          <div class="book-item">
+              <p class="author "><strong>Author</strong></p>
+              <p><?=  $book['author'] ?></p>
+          </div>
+          <div class="book-item">
+              <p class="publisher "><strong>Publisher</strong></p>
+              <p><?=  $book['publisher'] ?></p>
+          </div>
+          <div class="book-item">
+              <p class="language book-item-title"><strong>Language</strong></p>
+              <p><?=  $book['language'] ?></p>
+          </div>
+          <div class="book-item">
+              <p class="category "><strong>Category</strong></p>
+              <p><?=  $book['category'] ?></p>
+          </div>
+          <!-- DELETE BOOK -->
+          <form
+              method = "POST"
+              action="src/process_deletebook.php"
+              name="form-deletebook">
+      
+              <!-- hidden book id -->
+              <input
+                  type="hidden"
+                  name="book-id"
+                  id="book-id"
+                  value="<?= $book['book_id'] ?>">
+              <button
+                  id="delete-book"
+                  class="delete-book"
+                  name="delete-book"
+                  >Delete book</button>
+          </form>
+          <a href="books.php" class="goback">Go back</a>
+      </div>
     </div>
 
   </body>

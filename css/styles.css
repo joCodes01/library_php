@@ -22,6 +22,22 @@
   white-space: nowrap;
   border: 0;
 }
+/* FORM handling */
+
+.input-error {
+  border: 1px solid red;
+}
+.error-text {
+  color: red;
+}
+
+.input-valid {
+  border: 1px solid green;
+}
+
+.valid-text {
+  color: green;
+}
 
 /* ELEMENT level CSS */
 p {
@@ -45,7 +61,7 @@ h2 {
 .form-signup {
   max-width: 30rem;
   margin: 0 auto;
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 /* NAVIGATION */
@@ -72,16 +88,29 @@ h2 {
   width: 100%;
   height: auto;
   object-fit: cover;
+  justify-content: center;
 }
+.container-login-home {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: fit-content;
+  margin: 0.5rem auto;
+}
+.container-whatson {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 .container-welcome,
 .container-whatson {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   background-color: white;
   border-radius: 5px;
-  margin: 2rem;
   padding: 2rem;
 }
 .container-welcome a {
@@ -177,4 +206,16 @@ h2 {
 /* EDIT BOOK */
 #btn-editbook {
   width: 100%;
+}
+.goback {
+  text-align: right;
+}
+.container-delete-outer {
+  margin-top: 6rem;
+  padding: 2rem;
+}
+.container-delete {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 2rem;
 }

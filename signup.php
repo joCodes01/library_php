@@ -39,10 +39,12 @@ require 'src/session.php';
             type="text"
             id="firstname"
             name="firstname"
-            class="form-control"
+            class="form-control "
             maxlength="20"
             required
           />
+          <span id="firstname-message" class=""></span>
+          
         </div>
         <div class="mb-3">
           <label for="lastname" class="form-label">Last name</label>
@@ -54,6 +56,7 @@ require 'src/session.php';
             maxlength="20"
             required
           />
+          <span id="lastname-message" class=""></span>
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
@@ -64,6 +67,7 @@ require 'src/session.php';
             class="form-control"
             required
           />
+          <span id="email-message" class=""></span>
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
@@ -72,8 +76,10 @@ require 'src/session.php';
             id="create-password"
             name="password"
             class="form-control"
+            autocomplete="new-password"
             required
           />
+          <span id="password-message" class=""></span>
         </div>
         <div class="mb-3">
           <label for="password2" class="form-label">Re-type password</label>
@@ -82,10 +88,13 @@ require 'src/session.php';
             id="password2"
             name="password2"
             class="form-control"
+            autocomplete="new-password"
             required
           />
+          <span id="password2-message" class=""></span>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <span id="message-success" class="valid-text"></span>
+        <button type="submit" class="btn btn-primary">Sign up</button>
       </form>
     </div>
   </body>
